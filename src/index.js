@@ -1,7 +1,5 @@
 import { Orden } from './orden.js';
 
-// Metodo para calcular el precio neto
-
 document.getElementById('formulario').addEventListener('submit', function (event) {
   event.preventDefault();
 
@@ -19,5 +17,13 @@ document.getElementById('formulario').addEventListener('submit', function (event
 
   const orden = new Orden(cantidad, precio);
   const precioNeto = orden.calcularPrecioNeto();
-  document.getElementById('resultado').innerText = `Precio neto: $${precioNeto.toFixed(2)}`;
+  const descuento = orden.aplicarDescuento(precioNeto);
+  const precioConDescuento = precioNeto - descuento;
+
+  // Muestra el resultado al usuario
+  document.getElementById('resultado').innerHTML = `
+    Precio neto: $${precioNeto.toFixed(2)}<br>
+    Descuento: $${descuento.toFixed(2)}<br>
+    Precio con descuento: $${precioConDescuento.toFixed(2)}
+  `;
 });

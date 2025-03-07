@@ -7,4 +7,9 @@ export class Orden {
   calcularPrecioNeto() {
     return this.cantidad * this.precioPorItem;
   }
+
+  aplicarDescuento(precioTotal) {
+    if (precioTotal >= 1000) return precioTotal * 0.03;
+    return 0;
+  }
 }
