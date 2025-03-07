@@ -9,10 +9,12 @@ export class Orden {
   }
 
   aplicarDescuento(precioTotal) {
-    if (precioTotal >= 10000) return precioTotal * 0.10;
-    if (precioTotal >= 7000) return precioTotal * 0.07;
-    if (precioTotal >= 3000) return precioTotal * 0.05;
-    if (precioTotal >= 1000) return precioTotal * 0.03;
-    return 0;
+    const descuentos = [
+      { limite: 999, porcentaje: 0 },
+      { limite: 2999, porcentaje: 0.03 }
+    ];
+
+    const descuento = descuentos.find(d => precioTotal <= d.limite).porcentaje;
+    return Math.round(precioTotal * descuento * 100) / 100; // Redondeo a 2 decimales
   }
 }

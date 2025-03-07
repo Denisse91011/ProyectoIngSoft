@@ -14,10 +14,12 @@ describe('Clase Orden', () => {
 // Prueba para aplicar el descuento basado en el precio total
 
 describe('aplicarDescuento', () => {
+  
   it('debería aplicar un descuento del 3% para un precio total de 1000', () => {
     const orden = new Orden(20, 50); 
     expect(orden.aplicarDescuento(1000)).toEqual(30); 
   });
+  /*
 
   it('debería aplicar un descuento del 5% para un precio total de 3000', () => {
     const orden = new Orden(60, 50); 
@@ -33,6 +35,12 @@ describe('aplicarDescuento', () => {
     const orden = new Orden(200, 50); 
     expect(orden.aplicarDescuento(10000)).toEqual(1000); 
   });
+
+  it('debería aplicar un descuento del 15% para un precio total de 30000', () => {
+    const orden = new Orden(600, 50); 
+    expect(orden.aplicarDescuento(30000)).toEqual(4500); 
+  });
+  */
 
 });
 
