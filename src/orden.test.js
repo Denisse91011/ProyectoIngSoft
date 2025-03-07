@@ -23,6 +23,11 @@ describe('aplicarDescuento', () => {
     const orden = new Orden(60, 50); 
       expect(orden.aplicarDescuento(3000)).toEqual(150); 
   });
+
+  it('debería aplicar un descuento del 7% para un precio total de 7000', () => {
+    const orden = new Orden(140, 50); 
+    expect(orden.aplicarDescuento(7000)).toBeCloseTo(490, 2);
+  });
 });
 
 
