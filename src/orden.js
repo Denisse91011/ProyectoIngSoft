@@ -9,6 +9,7 @@ export class Orden {
   }
 
   aplicarDescuento(precioTotal) {
+    if (precioTotal >= 10000) return precioTotal * 0.10;
     if (precioTotal >= 7000) return precioTotal * 0.07;
     if (precioTotal >= 3000) return precioTotal * 0.05;
     if (precioTotal >= 1000) return precioTotal * 0.03;
