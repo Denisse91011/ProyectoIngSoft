@@ -83,5 +83,15 @@ describe('Impuestos por Estado', () => {
 
     expect(impuesto).toBeCloseTo(24.00, 2); 
   });
+
+  it('debería calcular el impuesto correctamente para el estado UT (6.65%)', () => {
+    const orden = new Orden(50, 10); 
+    const precioNeto = 500; 
+    const estado = 'UT'; 
+
+    const impuesto = orden.calcularImpuesto(precioNeto, estado);
+
+    expect(impuesto).toBeCloseTo(33.25, 2); 
+  });
 });
 

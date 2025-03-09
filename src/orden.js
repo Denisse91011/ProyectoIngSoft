@@ -27,7 +27,8 @@ export class Orden {
       'CA': 0.0825, 
       'AL': 0.04,
       'TX': 0.0625,
-      'NV': 0.08
+      'NV': 0.08,
+      'UT': 0.0665
     };
 
     if (estado in tasasImpuestos) {
