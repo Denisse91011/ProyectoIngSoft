@@ -25,6 +25,7 @@ export class Orden {
   calcularImpuesto(precioNeto, estado) {
     const tasasImpuestos = {
       'CA': 0.0825, 
+      'AL': 0.04
     };
 
     if (estado in tasasImpuestos) {

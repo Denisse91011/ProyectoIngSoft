@@ -53,5 +53,15 @@ describe('Impuestos por Estado', () => {
 
     expect(impuesto).toBeCloseTo(8.25, 2); 
   });
+
+  it('debería calcular el impuesto correctamente para el estado AL (4.00%)', () => {
+    const orden = new Orden(10, 10); 
+    const precioNeto = 100; 
+    const estado = 'AL'; 
+
+    const impuesto = orden.calcularImpuesto(precioNeto, estado);
+
+    expect(impuesto).toBeCloseTo(4.00, 2); 
+  });
 });
 
