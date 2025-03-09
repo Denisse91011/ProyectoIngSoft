@@ -26,7 +26,8 @@ export class Orden {
     const tasasImpuestos = {
       'CA': 0.0825, 
       'AL': 0.04,
-      'TX': 0.0625
+      'TX': 0.0625,
+      'NV': 0.08
     };
 
     if (estado in tasasImpuestos) {

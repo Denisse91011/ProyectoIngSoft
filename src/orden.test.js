@@ -74,6 +74,14 @@ describe('Impuestos por Estado', () => {
     expect(impuesto).toBeCloseTo(6.25, 2); 
   });
 
-  
+  it('debería calcular el impuesto correctamente para el estado NV (8.00%)', () => {
+    const orden = new Orden(30, 10); 
+    const precioNeto = 300; 
+    const estado = 'NV'; 
+
+    const impuesto = orden.calcularImpuesto(precioNeto, estado);
+
+    expect(impuesto).toBeCloseTo(24.00, 2); 
+  });
 });
 
