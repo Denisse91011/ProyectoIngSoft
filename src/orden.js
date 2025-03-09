@@ -12,7 +12,8 @@ export class Orden {
     const descuentos = [
       { limite: 999, porcentaje: 0 },
       { limite: 2999, porcentaje: 0.03 },
-      { limite: 6999, porcentaje: 0.05 }
+      { limite: 6999, porcentaje: 0.05 },
+      { limite: 9999, porcentaje: 0.07},
     ];
 
     const descuento = descuentos.find(d => precioTotal <= d.limite).porcentaje;
