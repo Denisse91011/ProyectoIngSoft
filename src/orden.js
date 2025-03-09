@@ -21,4 +21,17 @@ export class Orden {
     const descuento = descuentos.find(d => precioTotal <= d.limite).porcentaje;
     return Math.round(precioTotal * descuento * 100) / 100; // Redondeo a 2 decimales
   }
+
+  calcularImpuesto(precioNeto, estado) {
+    const tasasImpuestos = {
+      'CA': 0.0825, 
+    };
+
+    if (estado in tasasImpuestos) {
+      const tasaImpuesto = tasasImpuestos[estado];
+      return precioNeto * tasaImpuesto;
+    } else {
+      throw new Error(`Estado no válido: ${estado}`);
+    }
+  }
 }
