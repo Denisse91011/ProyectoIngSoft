@@ -95,3 +95,16 @@ describe('Impuestos por Estado', () => {
   });
 });
 
+// Prueba para aplicar impuesto adicional
+
+describe('calcularImpuestoAdicional', () => {
+  
+  it('debería no aplicar impuesto adicional para la categoría "Varios"', () => {
+    const orden = new Orden(20, 50); 
+    expect(orden.calcularImpuestoAdicional(150, 'Varios')).toEqual(0);
+  });
+
+});
+
+
+

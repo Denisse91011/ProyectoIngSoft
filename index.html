@@ -22,6 +22,16 @@
       <option value="TX">Texas (TX)</option>
       <option value="AL">Alabama (AL)</option>
     </select>
+    <label for="categoria">Categoría:</label>
+        <select id="categoria" required>
+            <option value="Alimentos">Alimentos (+2% descuento)</option>
+            <option value="Bebidas alcohólicas">Bebidas alcohólicas (+7% impuesto)</option>
+            <option value="Material de escritorio">Material de escritorio (+1.5% descuento)</option>
+            <option value="Muebles">Muebles (+3% impuesto)</option>
+            <option value="Electrónicos">Electrónicos (+4% impuesto, +1% descuento)</option>
+            <option value="Vestimenta">Vestimenta (+2% impuesto)</option>
+            <option value="Varios" selected>Varios</option>
+        </select>
     <button type="submit">Calcular</button>
   </form>
   <div id="resultado"></div>
