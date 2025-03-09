@@ -63,5 +63,17 @@ describe('Impuestos por Estado', () => {
 
     expect(impuesto).toBeCloseTo(4.00, 2); 
   });
+
+  it('debería calcular el impuesto correctamente para el estado TX (6.25%)', () => {
+    const orden = new Orden(10, 10); 
+    const precioNeto = 100; 
+    const estado = 'TX'; 
+
+    const impuesto = orden.calcularImpuesto(precioNeto, estado);
+
+    expect(impuesto).toBeCloseTo(6.25, 2); 
+  });
+
+  
 });
 
