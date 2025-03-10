@@ -29,8 +29,14 @@ document.getElementById('formulario').addEventListener('submit', function (event
   // Cálculo del impuesto adicional basado en la categoría
   const impuestoAdicional = orden.calcularImpuestoAdicional(precioConDescuento, categoria);
 
+  // Calcular el descuento adicional basado en la categoría
+  const descuentoAdicional = orden.calcularDescuentoAdicional(precioConDescuento, categoria);
+
+  // Aplicar el descuento adicional al precio con descuento
+  const precioFinalConDescuentoAdicional = precioConDescuento - descuentoAdicional;
+
   // Calcular el precio total
-  const precioTotal = precioConDescuento + impuesto + impuestoAdicional;
+  const precioTotal = precioFinalConDescuentoAdicional + impuesto + impuestoAdicional;
 
   // Mostrar el resultado al usuario
   document.getElementById('resultado').innerHTML = `
@@ -38,6 +44,7 @@ document.getElementById('formulario').addEventListener('submit', function (event
     <p>Precio neto (${cantidad} × $${precio.toFixed(2)}): <strong>$${precioNeto.toFixed(2)}</strong></p>
     <p>Descuento por volumen: <strong>$${descuento.toFixed(2)}</strong></p>
     <p>Precio con descuento: <strong>$${precioConDescuento.toFixed(2)}</strong></p>
+    <p>Descuento adicional (${categoria}): <strong>$${descuentoAdicional.toFixed(2)}</strong></p>
     <hr>
     <p>Impuesto (${estado}): <strong>$${impuesto.toFixed(2)}</strong></p>
     <p>Impuesto adicional (${categoria}): <strong>$${impuestoAdicional.toFixed(2)}</strong></p>

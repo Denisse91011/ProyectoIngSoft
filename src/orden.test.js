@@ -134,8 +134,20 @@ describe('calcularImpuestoAdicional', () => {
     const orden = new Orden(20, 50); 
     expect(orden.calcularImpuestoAdicional(400, 'Vestimenta')).toEqual(8); 
   });
-
 });
 
+// Prueba para aplicar el descuento adicional
+
+describe('calcularDescuentoAdicional', () => {
+  it('no debe aplicar descuento adicional para la categoría "Varios"', () => {
+    const orden = new Orden(5, 100);
+    const precioNeto = orden.calcularPrecioNeto();
+    const descuentoAdicional = orden.calcularDescuentoAdicional(precioNeto, 'Varios');
+    expect(descuentoAdicional).toBe(0); // No hay descuento adicional para "Varios"
+  });
+
+ 
+
+});
 
 

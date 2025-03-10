@@ -53,4 +53,17 @@ export class Orden {
     const tasaImpuestoAdicional = impuestosAdicionales[categoria] || 0;
     return Math.round(precioNeto * tasaImpuestoAdicional * 100) / 100; // Redondeo a 2 decimales
   }
+
+  calcularDescuentoAdicional(precioNeto, categoria) {
+    const descuentosAdicionales = {
+      'Varios': 0,
+
+
+    };
+  
+    const tasaDescuentoAdicional = descuentosAdicionales[categoria] || 0;
+    return Math.round(precioNeto * tasaDescuentoAdicional * 100) / 100; // Redondeo a 2 decimales
+  }
+
+
 }
