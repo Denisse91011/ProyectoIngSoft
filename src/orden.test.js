@@ -119,6 +119,11 @@ describe('calcularImpuestoAdicional', () => {
     const orden = new Orden(20, 50); 
     expect(orden.calcularImpuestoAdicional(300, 'Material de escritorio')).toEqual(0); 
   });
+
+  it('debería aplicar 3% de impuesto adicional para la categoría "Muebles"', () => {
+    const orden = new Orden(20, 50); 
+    expect(orden.calcularImpuestoAdicional(200, 'Muebles')).toEqual(6); 
+  });
   
 
 
