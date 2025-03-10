@@ -42,7 +42,10 @@ export class Orden {
   calcularImpuestoAdicional(precioNeto, categoria) {
     const impuestosAdicionales = {
       'Varios': 0,
-    };
+
+
+      
+    }
   
     const tasaImpuestoAdicional = impuestosAdicionales[categoria] || 0;
     return Math.round(precioNeto * tasaImpuestoAdicional * 100) / 100; // Redondeo a 2 decimales
