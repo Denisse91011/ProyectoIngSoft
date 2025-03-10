@@ -130,6 +130,10 @@ describe('calcularImpuestoAdicional', () => {
     expect(orden.calcularImpuestoAdicional(150, 'Electrónicos')).toEqual(6); 
   });
 
+  it('debería aplicar 2% de impuesto adicional para la categoría "Vestimenta"', () => {
+    const orden = new Orden(20, 50); 
+    expect(orden.calcularImpuestoAdicional(400, 'Vestimenta')).toEqual(8); 
+  });
 
 });
 

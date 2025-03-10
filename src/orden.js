@@ -47,8 +47,7 @@ export class Orden {
       'Material de escritorio': 0,
       'Muebles': 0.03,
       'Electrónicos': 0.04,
-
-      
+      'Vestimenta': 0.02
     }
   
     const tasaImpuestoAdicional = impuestosAdicionales[categoria] || 0;
