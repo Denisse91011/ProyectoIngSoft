@@ -105,6 +105,13 @@ describe('calcularImpuestoAdicional', () => {
   });
 
 
+  it('debería no aplicar impuesto adicional para la categoría "Alimentos"', () => {
+    const orden = new Orden(10, 50); 
+    expect(orden.calcularImpuestoAdicional(200, 'Alimentos')).toEqual(0); 
+  });
+  
+
+
 });
 
 

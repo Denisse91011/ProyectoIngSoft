@@ -42,8 +42,8 @@ export class Orden {
   calcularImpuestoAdicional(precioNeto, categoria) {
     const impuestosAdicionales = {
       'Varios': 0,
-
-
+      'Alimentos': 0,
+   
       
     }
   
