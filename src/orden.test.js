@@ -125,6 +125,10 @@ describe('calcularImpuestoAdicional', () => {
     expect(orden.calcularImpuestoAdicional(200, 'Muebles')).toEqual(6); 
   });
   
+  it('debería aplicar 4% de impuesto adicional para la categoría "Electrónicos"', () => {
+    const orden = new Orden(20, 50); 
+    expect(orden.calcularImpuestoAdicional(150, 'Electrónicos')).toEqual(6); 
+  });
 
 
 });
