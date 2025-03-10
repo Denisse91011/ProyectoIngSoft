@@ -43,6 +43,7 @@ export class Orden {
     const impuestosAdicionales = {
       'Varios': 0,
       'Alimentos': 0,
+      'Bebidas alcohólicas': 0.07,
    
       
     }

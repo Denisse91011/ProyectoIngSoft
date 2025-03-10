@@ -109,6 +109,11 @@ describe('calcularImpuestoAdicional', () => {
     const orden = new Orden(10, 50); 
     expect(orden.calcularImpuestoAdicional(200, 'Alimentos')).toEqual(0); 
   });
+
+  it('debería aplicar 7% de impuesto adicional para la categoría "Bebidas alcohólicas"', () => {
+    const orden = new Orden(20, 50); 
+    expect(orden.calcularImpuestoAdicional(100, 'Bebidas alcohólicas')).toEqual(7); 
+  });
   
 
 
