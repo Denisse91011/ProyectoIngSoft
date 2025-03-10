@@ -44,6 +44,7 @@ export class Orden {
       'Varios': 0,
       'Alimentos': 0,
       'Bebidas alcohólicas': 0.07,
+      'Material de escritorio': 0,
    
       
     }

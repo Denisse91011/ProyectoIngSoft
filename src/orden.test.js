@@ -114,6 +114,11 @@ describe('calcularImpuestoAdicional', () => {
     const orden = new Orden(20, 50); 
     expect(orden.calcularImpuestoAdicional(100, 'Bebidas alcohólicas')).toEqual(7); 
   });
+
+  it('debería no aplicar impuesto adicional para la categoría "Material de escritorio"', () => {
+    const orden = new Orden(20, 50); 
+    expect(orden.calcularImpuestoAdicional(300, 'Material de escritorio')).toEqual(0); 
+  });
   
 
 
